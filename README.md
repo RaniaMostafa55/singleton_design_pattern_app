@@ -4,13 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project applies singleton design pattern as following:
+- A class called "Database" was created but only one object must be created of it
+- The function called "createDatabase" was created to check if an object already exists, then it will return it, if there is no created object, then it will create one and return it.
+- In the "Client" class, two objects of type "Database" were created using "createDatabase" function
+- The function called "checkDatabase" was created to check if the two objects really equal or not, which means they are the same one
+- In the main function, an object of type "client" was created to call "checkDatabase" function through it
